@@ -125,3 +125,66 @@ export const careerCardData = [
         duration:'Full-time'
     },
 ]
+
+export const checkboxData = [
+  {
+    id: 1,
+    name: "Customer Support Service",
+  },
+  {
+    id: 2,
+    name: "Technical Support Service",
+  },
+  {
+    id: 3,
+    name: "Telemarketing Service",
+  },
+  {
+    id: 4,
+    name: "Collections",
+  },
+  {
+    id: 5,
+    name: "IT Help-desk Services",
+  },
+  {
+    id: 6,
+    name: "Insurance Processing",
+  },
+  {
+    id: 7,
+    name: "Data Entry/Processing Service",
+  },
+  {
+    id: 8,
+    name: "Lead Generation",
+  },
+  {
+    id: 9,
+    name: "Chat and Email Support",
+  },
+  {
+    id: 10,
+    name: "Back Office",
+  },
+  {
+    id: 11,
+    name: "Healthcare related",
+  },
+  {
+    id: 12,
+    name: "IT/Software Operations",
+  },
+  {
+    id: 13,
+    name: "Finance/Accounting Service (Billings, Account Payables and Receivables, General Accounting, Auditing & Compliance)",
+  },
+  {
+    id: 14,
+    name: "HR Services (Payroll, HMO, Hiring & Recruitment, Workforce Training)",
+  },
+  {
+    id: 15,
+    name: "Others",
+  },
+];
