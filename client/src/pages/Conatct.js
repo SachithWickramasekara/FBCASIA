@@ -22,7 +22,7 @@ const Contact = () => {
             Our network of specialized outsourced services supports businesses around the globe.
             </span>
         </div>
-        <ContacttMap/>
+        {/* <ContacttMap/> */}
         <ContactAddresses/>
     </div>
   )
