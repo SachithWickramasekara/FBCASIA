@@ -63,13 +63,19 @@ const Navbar = () => {
               </button>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
-              <Link to={routePaths.about} className="text-sm font-medium active:text-orange-500" >
+              <Link
+                to={routePaths.about}
+                className="text-sm font-medium active:text-orange-500"
+              >
                 About
               </Link>
               <Link to={routePaths.services} className="text-sm font-medium">
                 Services
               </Link>
-              <Link to={routePaths.FBC_Difference} className="text-sm font-medium">
+              <Link
+                to={routePaths.FBC_Difference}
+                className="text-sm font-medium"
+              >
                 FBC Difference
               </Link>
               <Link to={routePaths.blog} className="text-sm font-medium">
@@ -86,7 +92,9 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`md:hidden ${isOpen ? "block" : "hidden"}`}
+        className={`md:hidden bg-[#0C2E4E] absolute w-full  ${
+          isOpen ? "block" : "hidden"
+        }`}
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -96,11 +104,17 @@ const Navbar = () => {
           >
             About
           </Link>
-          <Link to={routePaths.services} className="text-sm font-medium block py-2 px-3 rounded-md text-white ">
-                Services
+          <Link
+            to={routePaths.services}
+            className="text-sm font-medium block py-2 px-3 rounded-md text-white "
+          >
+            Services
           </Link>
-          <Link to={routePaths.FBC_Difference} className="text-sm font-medium block py-2 px-3 rounded-md text-white ">
-                FBC Difference
+          <Link
+            to={routePaths.FBC_Difference}
+            className="text-sm font-medium block py-2 px-3 rounded-md text-white "
+          >
+            FBC Difference
           </Link>
           <Link
             to={routePaths.blog}

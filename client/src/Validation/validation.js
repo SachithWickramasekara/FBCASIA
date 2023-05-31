@@ -13,12 +13,80 @@ const validateFirstName = ({ firstName, setFirstNameError }) => {
     : setFirstNameError("");
 };
 
+const validateMiddleName = ({ middleName, setmiddleNameError }) => {
+  const firstNameRegex = /^[a-zA-Z]+$/;
+  return middleName && !middleName.match(firstNameRegex)
+    ? setmiddleNameError("Please enter a valid first name")
+    : setmiddleNameError("");
+};
+
 const validateLastName = ({ lastName, setLastNameError }) => {
   const lastNameRegex = /^[a-zA-Z]+$/;
   return lastName && !lastName.match(lastNameRegex)
     ? setLastNameError("Please enter a valid last name")
     : setLastNameError("");
 };
+
+const validateAddress = ({ address, setAddressError }) => {
+  return address && address.length < 10
+    ? setAddressError("Address is too short")
+    : address && address.length > 500
+    ? setAddressError("Try to make it shorter and meaningful")
+    : setAddressError("");
+};
+
+const validateAddress2 = ({ address2, setAddress2Error }) => {
+  return address2 && address2.length < 10
+    ? setAddress2Error("Address is too short")
+    : address2 && address2.length > 500
+    ? setAddress2Error("Try to make it shorter and meaningful")
+    : setAddress2Error("");
+};
+
+const validateCity = ({ city, setCityError }) => {
+  const cityRegex = /^[a-zA-Z]+$/;
+  return city && !city.match(cityRegex)
+    ? setCityError("Please enter a valid city name")
+    : setCityError("");
+};
+
+const validateState = ({ state, setStateError }) => {
+  const stateRegex = /^[a-zA-Z]+$/;
+  return state && !state.match(stateRegex)
+    ? setStateError("Please enter a valid state name")
+    : setStateError("");
+};
+
+const validateZip = ({ zip, setZipError }) => {
+  const zipRegex = /^[0-9]+$/;
+  return zip && !zip.match(zipRegex)
+    ? setZipError("Please enter a valid zip code")
+    : setZipError("");
+};
+
+const validateCountry = ({ country, setCountryError }) => {
+  const countryRegex = /^[a-zA-Z]+$/;
+  return country && !country.match(countryRegex)
+    ? setCountryError("Please enter a valid country name")
+    : setCountryError("");
+};
+
+const validateSkypeId = ({ skyeId, setSkyeIdError }) => {
+  return skyeId && skyeId.length < 5
+    ? setSkyeIdError("Skye Id is too short")
+    : skyeId && skyeId.length > 500
+    ? setSkyeIdError("Try to make it shorter and meaningful")
+    : setSkyeIdError("");
+};
+
+const validateEmployeeId = ({ employeeId, setEmployeeIdError }) => {
+  return employeeId && employeeId.length < 5
+    ? setEmployeeIdError("Employee Id is too short")
+    : employeeId && employeeId.length > 500
+    ? setEmployeeIdError("Try to make it shorter and meaningful")
+    : setEmployeeIdError("");
+};
+
 
 const validateMessage = ({ message, setMessageError }) => {
   return message && message.length < 5
@@ -50,8 +118,10 @@ const validateCompanyWebsite = ({ companyWebsite, setCompanyWebsiteError }) => {
     : setCompanyWebsiteError("");
 };
 
-
-const validateEngagementModel = ({ engagementModels, setEngagementModelsError }) => {
+const validateEngagementModel = ({
+  engagementModels,
+  setEngagementModelsError,
+}) => {
   return engagementModels.length === 0
     ? setEngagementModelsError("Please select at least one engagement model")
     : setEngagementModelsError("");
@@ -63,4 +133,24 @@ const validateFoundUs = ({ foundUs, setFoundUsError }) => {
     : setFoundUsError("");
 };
 
-export { validateEmail, validateFirstName, validateLastName, validateMessage ,validateContactNumber,validateCompanyName,validateCompanyWebsite,validateEngagementModel,validateFoundUs};
+export {
+  validateEmail,
+  validateFirstName,
+  validateLastName,
+  validateMiddleName,
+  validateMessage,
+  validateContactNumber,
+  validateCompanyName,
+  validateCompanyWebsite,
+  validateEngagementModel,
+  validateFoundUs,
+  validateAddress,
+  validateAddress2,
+  validateCity,
+  validateState,
+  validateZip,
+  validateCountry,
+  validateSkypeId,
+  validateEmployeeId,
+
+};

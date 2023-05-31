@@ -88,7 +88,7 @@ const ContactUsForm = () => {
       !messageError
       //   !foundUsError
     ) {
-      console.log("DOne");
+      console.log("Done");
       Contact({
         firstName,
         lastName,
@@ -101,6 +101,7 @@ const ContactUsForm = () => {
         foundUs,
         setSend,
       }).then(() => setButtonLoading(false));
+      console.log(Contact);
     }
   };
 

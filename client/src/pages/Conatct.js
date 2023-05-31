@@ -1,7 +1,6 @@
 import React from 'react'
 import ConatctUsImage from '../components/ContactUs/ContactUsImage'
 import ContactUsForm from '../components/ContactUs/ContactUsForm'
-import ContacttMap from '../components/ContactUs/ContactMap'
 import ContactAddresses from '../components/ContactUs/ContactAddresses'
 
 const Contact = () => {
