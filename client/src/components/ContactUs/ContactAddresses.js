@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { contactAddressData } from "../../constants/ContactData";
 import { BiMap, BiPhoneCall } from "react-icons/bi";
-import {MdEmail} from 'react-icons/md'
+import { MdEmail } from "react-icons/md";
 const ContactAddresses = () => {
   const [selectedCountry, setSelectedCountry] = useState("Philippines");
 
@@ -28,6 +28,30 @@ const ContactAddresses = () => {
             loading="lazy"
           />
         )}
+        {selectedCountry === "Singapore" && (
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8126864546084!2d103.84656737464272!3d1.2864417987013441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da190bb5febd0b%3A0x3999e3ace9eb9af!2s68%20Circular%20Rd%2C%20Unit%2002-01%2C%20Singapore%20049422!5e0!3m2!1sen!2slk!4v1685504913157!5m2!1sen!2slk"
+            className="w-full h-[400px]"
+            allowfullscreen=""
+            loading="lazy"
+          />
+        )}
+        {selectedCountry === "Sri Lanka" && (
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.690963112127!2d79.85972727467595!3d6.927494293072308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25911cc8de8f7%3A0xc9c0d79b648a34fa!2sBPO%20Connect%20Pvt.%20Ltd.!5e0!3m2!1sen!2slk!4v1685505272113!5m2!1sen!2slk"
+            className="w-full h-[400px]"
+            allowfullscreen=""
+            loading="lazy"
+          />
+        )}
+        {selectedCountry === "USA" && (
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1801239481915!2d-73.98142912421663!3d40.75806287138675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258feea4b3f21%3A0x378ee091a5c43cb!2s1%20Rockefeller%20Plaza!5e0!3m2!1sen!2slk!4v1685945747163!5m2!1sen!2slk"
+            className="w-full h-[400px]"
+            yallowfullscreen=""
+            loading="lazy"
+          />
+        )}
       </div>
       <div className="bg-[#0C2E4E] px-6 py-10 lg:px-20 lg:py-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
         {contactAddressData.map((item, i) => (
@@ -40,15 +64,15 @@ const ContactAddresses = () => {
               {item.country}
             </div>
             <div className="w-full flex flex-row gap-4 hover:text-white">
-              <BiMap size={20} className="text-white"/>
+              <BiMap size={20} className="text-white" />
               <span className="w-[172px]">{item.address}</span>
             </div>
             <div className="w-full flex flex-row gap-4 hover:text-white">
-              <BiPhoneCall size={20} className="text-white"/>
+              <BiPhoneCall size={20} className="text-white" />
               <span className="w-[172px]">{item.phone}</span>
             </div>
             <div className="w-full flex flex-row gap-4 hover:text-white">
-             <MdEmail size={20} className="text-white"/>
+              <MdEmail size={20} className="text-white" />
               <span className="w-[172px]">{item.email}</span>
             </div>
           </div>
